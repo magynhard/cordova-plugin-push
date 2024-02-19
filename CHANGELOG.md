@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.0.1
+
+**Fixes:**
+
+- make compatible with @moodlehq/cordova-plugin-local-notification
+- Fire push notification event when app is in foreground
+
+
 ## 4.0.0
 
 **Breaking:**

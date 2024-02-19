@@ -32,7 +32,7 @@
 To install from the command line:
 
 ```bash
-cordova plugin add @havesource/cordova-plugin-push
+cordova plugin add @magynhard/cordova-plugin-push
 ```
 
 It is also possible to install via repo url directly (unstable)
@@ -40,7 +40,7 @@ It is also possible to install via repo url directly (unstable)
 or
 
 ```bash
-cordova plugin add github:havesource/cordova-plugin-push
+cordova plugin add github:magynhard/cordova-plugin-push
 ```
 
 To configure the `SENDER_ID`, place your `google-services.json` (Android) and/or `GoogleService-Info.plist` in the root folder of your project and then add the following lines into your config.xml.
@@ -76,7 +76,7 @@ By default, on iOS, the plugin will register with APNS. If you want to use FCM o
 > Note: You need to specify the SENDER_ID variable in your config.xml if you plan on installing/restoring plugins using the prepare method. The prepare method will skip installing the plugin otherwise.
 
 ```xml
-<plugin name="@havesource/cordova-plugin-push" spec="3.0.0" />
+<plugin name="@magynhard/cordova-plugin-push" spec="3.0.0" />
 ```
 
 ### Cordova-Android 9.x Specifics
@@ -116,7 +116,7 @@ To make the two work together, you need to migrate your GCM project from Google 
 {
   "cordova": {
     "plugins": {
-      "@havesource/cordova-plugin-push": {
+      "@magynhard/cordova-plugin-push": {
         "ANDROIDX_CORE_VERSION": "1.6.+",
         "FCM_VERSION": "18.+"
       }
@@ -159,7 +159,7 @@ Common plugins to suffer from this outdated dependency management are plugins re
 
 #### More than one library with package name 'com.google.android.gms'
 
-When some other packages include `cordova-google-play-services` as a dependency, such as is the case with the `cordova-admob` and `cordova-plugin-analytics` plugins, it is impossible to also add the `@havesource/cordova-plugin-push`, for the following error will rise during the build process:
+When some other packages include `cordova-google-play-services` as a dependency, such as is the case with the `cordova-admob` and `cordova-plugin-analytics` plugins, it is impossible to also add the `@magynhard/cordova-plugin-push`, for the following error will rise during the build process:
 
 ```
 :processDebugResources FAILED
@@ -229,8 +229,8 @@ This plugin uses the [Firebase/Messaging](https://cocoapods.org/pods/Firebase) l
 If you are attempting to install this plugin and you run into this error:
 
 ```log
-Installing "@havesource/cordova-plugin-push" for ios
-Failed to install '@havesource/cordova-plugin-push':Error: pod: Command failed with exit code 1
+Installing "@magynhard/cordova-plugin-push" for ios
+Failed to install '@magynhard/cordova-plugin-push':Error: pod: Command failed with exit code 1
     at ChildProcess.whenDone (/Users/smacdona/code/push151/platforms/ios/cordova/node_modules/cordova-common/src/superspawn.js:169:23)
     at emitTwo (events.js:87:13)
     at ChildProcess.emit (events.js:172:7)
