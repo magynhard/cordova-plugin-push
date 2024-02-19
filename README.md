@@ -1,3 +1,7 @@
+Forked from https://github.com/havesource/cordova-plugin-push and fixed:
+* make compatible with cordova-plugin-local-notification
+* trigger push event in background ('notification') when app is in foreground
+
 # Cordova Plugin Push
 
 [![Node CI](https://github.com/havesource/cordova-plugin-push/actions/workflows/ci.yml/badge.svg)](https://github.com/havesource/cordova-plugin-push/actions/workflows/ci.yml) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/422c67b5e70c4a0eadae7b9fc794d3c1)](https://app.codacy.com/gh/havesource/cordova-plugin-push?utm_source=github.com&utm_medium=referral&utm_content=havesource/cordova-plugin-push&utm_campaign=Badge_Grade_Settings)

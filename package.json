@@ -1,6 +1,6 @@
 {
-  "name": "@havesource/cordova-plugin-push",
-  "version": "4.0.1-dev.0",
+  "name": "magynhard/cordova-plugin-push",
+  "version": "4.0.1",
   "description": "Register and receive push notifications.",
   "scripts": {
     "build": "babel src/js --out-dir www",
@@ -11,17 +11,17 @@
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "npm run build && npm run lint && npm run jasmine"
   },
-  "repository": "github:havesource/cordova-plugin-push",
+  "repository": "github:magynhard/cordova-plugin-push",
   "keywords": [
     "ecosystem:cordova",
     "cordova-ios",
     "cordova-android",
     "cordova-browser"
   ],
-  "author": "Erisu",
+  "author": "Matthäus J. N. Beyrle <cordova-plugin-push.npm@mail.magynhard.de>",
   "license": "MIT",
-  "bugs": "https://github.com/havesource/cordova-plugin-push/issues",
-  "homepage": "https://github.com/havesource/cordova-plugin-push#readme",
+  "bugs": "https://github.com/magynhard/cordova-plugin-push/issues",
+  "homepage": "https://github.com/magynhard/cordova-plugin-push#readme",
   "devDependencies": {
     "@babel/cli": "^7.22.10",
     "@babel/core": "^7.22.11",
@@ -61,7 +61,7 @@
   },
   "types": "./types/index.d.ts",
   "cordova": {
-    "id": "@havesource/cordova-plugin-push",
+    "id": "@magynhard/cordova-plugin-push",
     "platforms": [
       "ios",
       "android",
