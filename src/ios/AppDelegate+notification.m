@@ -191,13 +191,23 @@ NSString *const pushPluginApplicationDidBecomeActiveNotification = @"pushPluginA
          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
 {
     NSLog( @"NotificationCenter Handle push from foreground" );
-    // custom code to handle push while app is in the foreground
-    PushPlugin *pushHandler = [self getCommandInstance:@"PushNotification"];
-    pushHandler.notificationMessage = notification.request.content.userInfo;
-    pushHandler.isInline = YES;
-    [pushHandler notificationReceived];
 
-    completionHandler(UNNotificationPresentationOptionNone);
+    // Acess Payload of notification
+    NSDictionary *userInfo = notification.request.content.userInfo;
+
+    // Add support for cordova local notification plugin
+    NSString *metaPluginOption = userInfo[@"meta"][@"plugin"];
+    if ([metaPluginOption containsString:@"cordova-plugin-local-notification"]) {
+        // Display notification
+        completionHandler(UNNotificationPresentationOptionAlert);
+    } else {
+        // Do not display notification, but trigger background info like on android, so the app can handle it on its own
+        PushPlugin *pushHandler = [self getCommandInstance:@"PushNotification"];
+        pushHandler.notificationMessage = userInfo;
+        pushHandler.isInline = YES;
+        [pushHandler notificationReceived];
+        completionHandler(UNNotificationPresentationOptionNone);
+    }
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
