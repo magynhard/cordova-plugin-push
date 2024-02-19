@@ -1,5 +1,5 @@
 {
-  "name": "magynhard/cordova-plugin-push",
+  "name": "@magynhard/cordova-plugin-push",
   "version": "4.0.1",
   "description": "Register and receive push notifications.",
   "scripts": {
